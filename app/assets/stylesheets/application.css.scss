@@ -22,6 +22,7 @@ h1, h2, h3{
     font-family: 'Open Sans', sans-serif;
 }
 
+//gradient background
 .navbar, .home-callout {
      background: #1e3c72;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
@@ -33,6 +34,7 @@ h1, h2, h3{
     border: none;
 }
 
+//Home-page styles
 .home-callout{
     color: white;
     margin-top: -20px;
@@ -40,20 +42,13 @@ h1, h2, h3{
     padding-bottom: 50px;
 }
 
-.navbar-default .navbar-brand{
+//nav styles
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav >li>a {
     color: white;
+    &:hover{
+        color: white;
+        opacity: .75;
+    }
 }
 
-.navbar-default .navbar-nav >li>a{
-    color: white;
-}
-
-.navbar-default .navbar-brand:hover{
-    color: white;
-    opacity: .75;
-}
-
-.navbar-default .navbar-nav>li>a:hover{
-    color:white;
-    opacity:.75;
-}
