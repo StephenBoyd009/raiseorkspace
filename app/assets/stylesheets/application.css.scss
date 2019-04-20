@@ -57,3 +57,14 @@
    font-family: 'Open sans', sans-serif;
    font-weight: 1000;
  }
+ 
+ .navbar-default .navbar-toggle .icon-bar {
+   background-color: white;
+ }
+ 
+ .navbar-default .navbar-toggle {
+   border: 5px solid white;
+   &:hover, &:focus {
+     background-color: #5691c8;
+   }
+ }
