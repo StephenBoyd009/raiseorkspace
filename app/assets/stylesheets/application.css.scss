@@ -13,42 +13,44 @@
  *= require_tree .
  *= require_self
  */
- 
- @import 'bootstrap-sprockets';
- @import 'bootstrap';
- 
-h1, h2, h3{
-    
-    font-family: 'Open Sans', sans-serif;
-}
-
-//gradient background
-.navbar, .home-callout {
-     background: #1e3c72;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    
-}
-
-.navbar{
-    border: none;
-}
-
-//Home-page styles
-.home-callout{
-    color: white;
-    margin-top: -20px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-//nav styles
-.navbar-default .navbar-brand,
-.navbar-default .navbar-nav >li>a {
-    color: white;
-    &:hover{
-        color: white;
-        opacity: .75;
-    }
-}
+   @import 'bootstrap-sprockets';
+   @import 'bootstrap';
+   @import "font-awesome-sprockets";
+   @import "font-awesome";
+   
+  h1, h2, h3{
+      
+      font-family: 'Open Sans', sans-serif;
+  }
+  
+  //gradient background
+  .navbar, .home-callout {
+       background: #1e3c72;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #2a5298, #1e3c72);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     
+  }
+  
+  .navbar{
+      border: none;
+  }
+  
+  //Home-page styles
+  .home-callout{
+      color: white;
+      margin-top: -20px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+  }
+  
+  //nav styles
+  .navbar-default .navbar-brand,
+  .navbar-default .navbar-nav >li>a {
+      color: white;
+      &:hover{
+          color: white;
+          opacity: .75;
+      }
+  }
 
