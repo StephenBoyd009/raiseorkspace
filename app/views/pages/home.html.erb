@@ -10,16 +10,16 @@
             <div class="col-md-6">
                 <div class="well">
                     <h2 class="text-center">Basic Memberships</h2>
-                    <h4>Sign up for a free account. This will give you access to the community</h4>
-                    <%= link_to "Sign Up With Basic", "#", class: 'btn btn-primary btn-lg btn-block'%>
+                    <h4 class="text-center" >Sign up for a free account. This will give you access to the community, for observational purposes</h4>
+                    <%= link_to "Sign Up With Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block'%>
                 </div>
             </div>
        
             <div class="col-md-6"> 
                 <div class="well">
                      <h2 class="text-center">Pro Memberships</h2>
-                     <h4>Get Pro Account and have access to the community and contact information.</h4>
-                     <%= link_to "Sign Up With Pro", "#", class: 'btn btn-success btn-lg btn-block'%>
+                     <h4 class="text-center">Get Pro Account and have access to the community and contact information.</h4>
+                     <%= link_to "Sign Up With Pro",  new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block'%>
                 </div>
             </div>
     </div> 
