@@ -6,12 +6,33 @@
 
 <div class="container home-signup-links ">
     <div class="row">
+        <% if user_signed_in? %>
+        <div class="col-md=6">
+            <div class="well">
+                <h2 class="text-center">Your Profile</h2>
+                <% if current_user.profile %>
+                    <%= link_to "Edit Your Profile", "#", class: 'btn btn-default btn-lg btn-block' %>
+                    <%= link_to "View Your Profile", user_path(current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+                <% else %>
+                <p>Please Create A new Profile To Ensure Adequate Interaction with the other Members of the Community   </p>
+                     <%= link_to "Create Your Profile", new_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+                <% end %>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="well">
+                <h2 class="text-center">The Community</h2>
+                <p>Visit The Community To Meet Developers, Entrepreneutrs and Investors</p>
+                <%= link_to "visit The Community", "#", class: 'btn btn-default btn-lg btn-block' %>
+            </div>
+        </div>
+        <% else %>
              </br>
             <div class="col-md-6">
                 <div class="well">
                     <h2 class="text-center">Basic Memberships</h2>
                     <h4 class="text-center" >Sign up for a free account. This will give you access to the community, for observational purposes</h4>
-                    <%= link_to "Sign Up With Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block'%>
+                    <%= link_to "Sign Up With Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-default btn-lg btn-block'%>
                 </div>
             </div>
        
@@ -22,6 +43,7 @@
                      <%= link_to "Sign Up With Pro",  new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block'%>
                 </div>
             </div>
+            <% end %>
     </div> 
-    <%= link_to "Create Your Profile", new_user_profile_path(user_id: current_user.id) if user_signed_in? %>
+    
 </div>   
